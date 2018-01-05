@@ -1,0 +1,111 @@
+﻿<Window x:Class="PersistentStackVisualization.MainWindow"
+        xmlns:n ="PersistentStackVisualization.ViewModel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersistentStackVisualization"
+        mc:Ignorable="d"
+        Title="Persistent stack visualization" Height="900" Width="1500">
+    <Grid ShowGridLines="False" x:Name="GlobalGrid" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="602*"></RowDefinition>
+            <RowDefinition Height="8.5"></RowDefinition>
+            <RowDefinition Height="21"/>
+            <RowDefinition Height="177*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Grid.Column="0" Grid.Row="0">
+            <MenuItem Header="About us">
+            </MenuItem>
+            <MenuItem Header="Exit">
+            </MenuItem>
+        </Menu>
+        <ToolBarTray Grid.Row="1"  Orientation="Horizontal" Background="#CCC">
+            <ToolBar VerticalAlignment="Top">
+                <ToggleButton x:Name="DestroyStack" Command="{Binding DestroyStack}" CommandParameter="{Binding ElementName=StackVersions}">
+                    <Image Source="Resources\Close_16x.png"></Image>
+                </ToggleButton>
+                <Separator></Separator>
+                <TextBlock Margin="5 10">Value: </TextBlock>
+                <TextBox Name="PushValue" Text="{Binding Path = ValueNode, UpdateSourceTrigger=PropertyChanged}" Margin="4" BorderBrush="#ccc" Width="100">
+                    <TextBox.ToolTip>
+                        <TextBlock>Value for pushing node</TextBlock>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <TextBlock Margin="5 10">Version: </TextBlock>
+                <TextBox Name="PushVersion" Text="{Binding Path = VersionNode, UpdateSourceTrigger=PropertyChanged}" Margin="4" BorderBrush="#ccc" Width="100">
+                    <TextBox.ToolTip>
+                        <TextBlock>Version for pushing node</TextBlock>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <ToggleButton x:Name="Push" Command="{Binding AddVersion}" CommandParameter="{Binding ElementName=StackVersions}" Background="{x:Null}" BorderBrush="{x:Null}">
+                    <Image Source="Resources\AddKeyframe_16x.png"></Image>
+                    <ToggleButton.ToolTip>
+                        <TextBlock>Push</TextBlock>
+                    </ToggleButton.ToolTip>
+                </ToggleButton>
+                <Separator></Separator>
+                <TextBlock Margin="5 10"> Pop Version: </TextBlock>
+                <TextBox Name="PopVersion" Text="{Binding Path = PopVersion, UpdateSourceTrigger=PropertyChanged}" Margin="10 4" BorderBrush="#ccc" Width="100">
+                    <TextBox.ToolTip>
+                        <TextBlock>Pop</TextBlock>
+                    </TextBox.ToolTip>
+                </TextBox>
+                <ToggleButton x:Name="Pop" Command="{Binding PopCommand}" CommandParameter="{Binding ElementName=StackVersions}">
+                    <Image Source="Resources\Cancel_16x.png"></Image>
+                    <ToggleButton.ToolTip>
+                        <TextBlock>Pop</TextBlock>
+                    </ToggleButton.ToolTip>
+                </ToggleButton>
+                <Separator></Separator>
+                <ToggleButton Command="{Binding OpenTestWindow}">
+                    <Image Source="Resources\AddTest_16x.png"></Image>
+                    <ToggleButton.ToolTip>
+                        <TextBlock>
+                            Open test
+                        </TextBlock>
+                    </ToggleButton.ToolTip>
+                </ToggleButton>
+                <Button Command="{Binding RunTest}" CommandParameter="{Binding ElementName=StackVersions}">Run</Button>
+            </ToolBar>
+        </ToolBarTray>
+
+        <ScrollViewer Name="PaintScope" Grid.Row="2" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
+            <StackPanel Name="StackVersions" Orientation="Vertical">
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <GridSplitter Grid.Row="3" Height="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Background="#FF8B8B8B" />
+
+        <Grid x:Name="GridConsole" Grid.Row="4" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ToggleButton Command="{Binding SaveLog}" Panel.ZIndex="1" Grid.Row="0" HorizontalAlignment="Right" Width="20" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0 0 45 0">
+                <Image Source="Resources\Save_16x.png"></Image>
+                <ToggleButton.ToolTip>
+                    <TextBlock>Save file log</TextBlock>
+                </ToggleButton.ToolTip>
+            </ToggleButton>
+            <ToggleButton Command="{Binding CleanConsole}" Panel.ZIndex="1" Grid.Row="0" HorizontalAlignment="Right" Width="20" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0 0 15 0">
+                <Image Source="Resources\CleanData_16x.png"></Image>
+                <ToggleButton.ToolTip>
+                    <TextBlock>Clean console</TextBlock>
+                </ToggleButton.ToolTip>
+            </ToggleButton>
+            <TextBlock x:Name="ConsoleTitle" Grid.Row="0" Text="Console" Padding="10 5 5 5" Background="#CCC" FontWeight="Bold" Foreground="#FF515151"></TextBlock>
+            <TextBox Name="ConsoleTextBox" Text="{Binding ConsoleText, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Margin="0,2,0,0" Background="#FFF7F7F7" SelectionBrush="#FF878787" IsReadOnly="True"/>
+        </Grid>
+
+        <TextBlock Grid.Column="0" Grid.Row="6" Text="Start application" Background="#FFE6E6E6" Padding="20 0 0 0"/>
+
+    </Grid>
+</Window>

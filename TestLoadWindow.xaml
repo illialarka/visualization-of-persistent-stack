@@ -1,0 +1,39 @@
+﻿<Window x:Class="PersistentStackVisualization.TestLoadWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersistentStackVisualization"
+        mc:Ignorable="d"
+        Title="TestLoadWindow" Height="500" Width="700">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0">
+            <MenuItem Header="File">
+                <MenuItem Header="Open test file" Command="{Binding OpenFile}" CommandParameter="{Binding ElementName=StackNumberLine}"></MenuItem>
+                <MenuItem Header="Save test" Command="{Binding SaveTest}"></MenuItem>
+                <MenuItem Header="Clear file" Command="{Binding ClearContentTest}" CommandParameter="{Binding ElementName=StackNumberLine}"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Close" Command="{Binding CloseWindow}"></MenuItem>
+        </Menu>
+        <ScrollViewer Name="TestContent" Grid.Column="0" Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel Name="StackNumberLine">
+                </StackPanel>
+                <TextBox Name="ContentText" Grid.Column="1"  TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding TestContent}">
+                    
+                </TextBox>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Window>
