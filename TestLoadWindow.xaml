@@ -6,34 +6,29 @@
         xmlns:local="clr-namespace:PersistentStackVisualization"
         mc:Ignorable="d"
         Title="TestLoadWindow" Height="500" Width="700">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="20 8 20 8" />
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Height" Value="30" />
+        </Style>
+    </Window.Resources>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Menu Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0">
-            <MenuItem Header="File">
-                <MenuItem Header="Open test file" Command="{Binding OpenFile}" CommandParameter="{Binding ElementName=StackNumberLine}"></MenuItem>
-                <MenuItem Header="Save test" Command="{Binding SaveTest}"></MenuItem>
-                <MenuItem Header="Clear file" Command="{Binding ClearContentTest}" CommandParameter="{Binding ElementName=StackNumberLine}"></MenuItem>
-            </MenuItem>
-            <MenuItem Header="Close" Command="{Binding CloseWindow}"></MenuItem>
-        </Menu>
-        <ScrollViewer Name="TestContent" Grid.Column="0" Grid.Row="1">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <StackPanel Name="StackNumberLine">
-                </StackPanel>
-                <TextBox Name="ContentText" Grid.Column="1"  TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding TestContent}">
-                    
-                </TextBox>
-            </Grid>
-        </ScrollViewer>
+        <DataGrid AutoGenerateColumns="False" x:Name="logRecords">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Action}" Header="Action" Width="100"/>
+                <DataGridTextColumn Binding="{Binding DateTime}" Header="Date Time" Width="110"/>
+                <DataGridTextColumn Binding="{Binding Message}" Header="Message" Width="70"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel HorizontalAlignment="Center"  Grid.Row="1" Orientation="Horizontal">
+            <Button x:Name="updateButton" Content="Update" Click="updateButton_Click" />
+            <Button x:Name="deleteButton" Content="Delete" Click="deleteButton_Click" />
+        </StackPanel>
     </Grid>
 </Window>

@@ -988,3 +988,97 @@ PersistentStackVisualization.exe Information: 0 :
 Start app
 
  file: \MainWindow.xaml.cs member: .ctor line: 15
+PersistentStackVisualization.exe Information: 0 : 
+
+Start app
+
+ file: \MainWindow.xaml.cs member: .ctor line: 15
+PersistentStackVisualization.exe Information: 0 : Push (0, 1) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Push (1, 2) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Pop (1) file: \ApplicationViewModel.cs member: PopCommand line: 187
+PersistentStackVisualization.exe Information: 0 : Push (0, 1) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Push (1, 2) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Pop (1) file: \ApplicationViewModel.cs member: PopCommand line: 187
+PersistentStackVisualization.exe Information: 0 : Push (0, 1) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Push (1, 2) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Pop (1) file: \ApplicationViewModel.cs member: PopCommand line: 187
+PersistentStackVisualization.exe Information: 0 : Destroy stack and clear paint area file: \ApplicationViewModel.cs member: DestroyStack line: 226
+PersistentStackVisualization.exe Error: 0 : # ERROR Version dose not exist file: \ApplicationViewModel.cs member: AddVersion line: 157
+PersistentStackVisualization.exe Error: 0 : # ERROR Version dose not exist file: \ApplicationViewModel.cs member: AddVersion line: 157
+PersistentStackVisualization.exe Error: 0 : # ERROR Version dose not exist file: \ApplicationViewModel.cs member: AddVersion line: 157
+PersistentStackVisualization.exe Information: 0 : Push (0, 1) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Push (1, 2) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Pop (1) file: \ApplicationViewModel.cs member: PopCommand line: 187
+PersistentStackVisualization.exe Information: 0 : Destroy stack and clear paint area file: \ApplicationViewModel.cs member: DestroyStack line: 226
+PersistentStackVisualization.exe Information: 0 : Destroy stack and clear paint area file: \ApplicationViewModel.cs member: DestroyStack line: 226
+PersistentStackVisualization.exe Error: 0 : # ERROR Version dose not exist file: \ApplicationViewModel.cs member: AddVersion line: 157
+PersistentStackVisualization.exe Information: 0 : 
+
+Start app
+
+ file: \MainWindow.xaml.cs member: .ctor line: 15
+PersistentStackVisualization.exe Error: 0 : # ERROR Version dose not exist file: \ApplicationViewModel.cs member: AddVersion line: 157
+PersistentStackVisualization.exe Error: 0 : # ERROR Version dose not exist file: \ApplicationViewModel.cs member: AddVersion line: 157
+PersistentStackVisualization.exe Error: 0 : # ERROR Version dose not exist file: \ApplicationViewModel.cs member: AddVersion line: 157
+PersistentStackVisualization.exe Error: 0 : # ERROR Version dose not exist file: \ApplicationViewModel.cs member: PopCommand line: 193
+PersistentStackVisualization.exe Error: 0 : # ERROR Version dose not exist file: \ApplicationViewModel.cs member: AddVersion line: 157
+PersistentStackVisualization.exe Information: 0 : Push (1, 2) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Pop (1) file: \ApplicationViewModel.cs member: PopCommand line: 187
+PersistentStackVisualization.exe Information: 0 : Destroy stack and clear paint area file: \ApplicationViewModel.cs member: DestroyStack line: 226
+PersistentStackVisualization.exe Error: 0 : # ERROR Version dose not exist file: \ApplicationViewModel.cs member: AddVersion line: 157
+PersistentStackVisualization.exe Information: 0 : Push (1, 2) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Pop (1) file: \ApplicationViewModel.cs member: PopCommand line: 187
+PersistentStackVisualization.exe Information: 0 : Push (0, 1) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Push (1, 2) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Pop (1) file: \ApplicationViewModel.cs member: PopCommand line: 187
+PersistentStackVisualization.exe Information: 0 : Push (0, 1) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Push (1, 2) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Pop (1) file: \ApplicationViewModel.cs member: PopCommand line: 187
+PersistentStackVisualization.exe Information: 0 : 
+
+Start app
+
+ file: \MainWindow.xaml.cs member: .ctor line: 15
+PersistentStackVisualization.exe Error: 0 : # ERROR Version dose not exist file: \ApplicationViewModel.cs member: AddVersion line: 157
+PersistentStackVisualization.exe Error: 0 : # ERROR Version dose not exist file: \ApplicationViewModel.cs member: AddVersion line: 157
+PersistentStackVisualization.exe Information: 0 : Push (1, 2) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Pop (1) file: \ApplicationViewModel.cs member: PopCommand line: 187
+PersistentStackVisualization.exe Information: 0 : Push (0, 1) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Push (1, 2) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Pop (1) file: \ApplicationViewModel.cs member: PopCommand line: 187
+PersistentStackVisualization.exe Information: 0 : Push (0, 1) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Push (1, 2) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Pop (1) file: \ApplicationViewModel.cs member: PopCommand line: 187
+PersistentStackVisualization.exe Information: 0 : Push (1, 2) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Push (1, 4) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Push (11, 18) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Push (12, 18) file: \ApplicationViewModel.cs member: AddVersion line: 150
+PersistentStackVisualization.exe Information: 0 : Pop (1) file: \ApplicationViewModel.cs member: PopCommand line: 187
+PersistentStackVisualization.exe Information: 0 : Destroy stack and clear paint area file: \ApplicationViewModel.cs member: DestroyStack line: 226
+PersistentStackVisualization.exe Error: 0 : # ERROR Version dose not exist file: \ApplicationViewModel.cs member: AddVersion line: 157
+PersistentStackVisualization.exe Information: 0 : 
+
+Start app
+
+ file: \MainWindow.xaml.cs member: .ctor line: 15
+PersistentStackVisualization.exe Information: 0 : 
+
+Start app
+
+ file: \MainWindow.xaml.cs member: .ctor line: 15
+PersistentStackVisualization.exe Information: 0 : 
+
+Start app
+
+ file: \MainWindow.xaml.cs member: .ctor line: 15
+PersistentStackVisualization.exe Information: 0 : Push (0, 1) file: \ApplicationViewModel.cs member: AddVersion line: 164
+PersistentStackVisualization.exe Information: 0 : Push (1, 2) file: \ApplicationViewModel.cs member: AddVersion line: 164
+PersistentStackVisualization.exe Information: 0 : Pop (1) file: \ApplicationViewModel.cs member: PopCommand line: 210
+PersistentStackVisualization.exe Information: 0 : Push (1, 12) file: \ApplicationViewModel.cs member: AddVersion line: 164
+PersistentStackVisualization.exe Information: 0 : Push (3, 14) file: \ApplicationViewModel.cs member: AddVersion line: 164
+PersistentStackVisualization.exe Information: 0 : Push (1, 2) file: \ApplicationViewModel.cs member: AddVersion line: 164
+PersistentStackVisualization.exe Information: 0 : 
+
+Start app
+
+ file: \MainWindow.xaml.cs member: .ctor line: 15

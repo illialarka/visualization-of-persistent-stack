@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Ilya Larka\source\CSharp\VisualizationsAlgorithm\PersistentStackVisualization\PersistentStackVisualization\PersistentStackVisualization\obj\Debug\
+C:\tt\visualization-of-persistent-stack\obj\Debug\
 PersistentStackVisualization
 none
 false
 DEBUG;TRACE
-C:\Users\Ilya Larka\source\CSharp\VisualizationsAlgorithm\PersistentStackVisualization\PersistentStackVisualization\PersistentStackVisualization\App.xaml
+C:\tt\visualization-of-persistent-stack\App.xaml
 21606051719
 
-222106645508
-131569487696
+19-1127624609
+171203307396
 MainWindow.xaml;TestLoadWindow.xaml;
 
-False
+True
 

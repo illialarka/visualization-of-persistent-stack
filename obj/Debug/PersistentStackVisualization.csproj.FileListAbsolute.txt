@@ -15,3 +15,28 @@ C:\Users\Ilya Larka\source\CSharp\VisualizationsAlgorithm\PersistentStackVisuali
 C:\Users\Ilya Larka\source\CSharp\VisualizationsAlgorithm\PersistentStackVisualization\PersistentStackVisualization\PersistentStackVisualization\obj\Debug\PersistentStackVisualization.pdb
 C:\Users\Ilya Larka\source\CSharp\VisualizationsAlgorithm\PersistentStackVisualization\PersistentStackVisualization\PersistentStackVisualization\obj\Debug\TestLoadWindow.g.cs
 C:\Users\Ilya Larka\source\CSharp\VisualizationsAlgorithm\PersistentStackVisualization\PersistentStackVisualization\PersistentStackVisualization\obj\Debug\TestLoadWindow.baml
+C:\tt\visualization-of-persistent-stack\bin\Debug\PersistentStackVisualization.exe.config
+C:\tt\visualization-of-persistent-stack\bin\Debug\PersistentStackVisualization.exe
+C:\tt\visualization-of-persistent-stack\bin\Debug\PersistentStackVisualization.pdb
+C:\tt\visualization-of-persistent-stack\obj\Debug\PersistentStackVisualization.csprojAssemblyReference.cache
+C:\tt\visualization-of-persistent-stack\obj\Debug\MainWindow.g.cs
+C:\tt\visualization-of-persistent-stack\obj\Debug\TestLoadWindow.g.cs
+C:\tt\visualization-of-persistent-stack\obj\Debug\App.g.cs
+C:\tt\visualization-of-persistent-stack\obj\Debug\PersistentStackVisualization_MarkupCompile.cache
+C:\tt\visualization-of-persistent-stack\obj\Debug\PersistentStackVisualization_MarkupCompile.lref
+C:\tt\visualization-of-persistent-stack\obj\Debug\MainWindow.baml
+C:\tt\visualization-of-persistent-stack\obj\Debug\TestLoadWindow.baml
+C:\tt\visualization-of-persistent-stack\obj\Debug\PersistentStackVisualization.g.resources
+C:\tt\visualization-of-persistent-stack\obj\Debug\PersistentStackVisualization.Properties.Resources.resources
+C:\tt\visualization-of-persistent-stack\obj\Debug\PersistentStackVisualization.csproj.GenerateResource.cache
+C:\tt\visualization-of-persistent-stack\obj\Debug\PersistentStackVisualization.csproj.CoreCompileInputs.cache
+C:\tt\visualization-of-persistent-stack\obj\Debug\PersistentStackVisualization.exe
+C:\tt\visualization-of-persistent-stack\obj\Debug\PersistentStackVisualization.pdb
+C:\tt\visualization-of-persistent-stack\bin\Debug\DataAccessLayer.dll
+C:\tt\visualization-of-persistent-stack\bin\Debug\EntityFramework.dll
+C:\tt\visualization-of-persistent-stack\bin\Debug\EntityFramework.SqlServer.dll
+C:\tt\visualization-of-persistent-stack\bin\Debug\DataAccessLayer.pdb
+C:\tt\visualization-of-persistent-stack\bin\Debug\DataAccessLayer.dll.config
+C:\tt\visualization-of-persistent-stack\bin\Debug\EntityFramework.xml
+C:\tt\visualization-of-persistent-stack\bin\Debug\EntityFramework.SqlServer.xml
+C:\tt\visualization-of-persistent-stack\obj\Debug\PersistentStackVisualization.csproj.CopyComplete

@@ -1,14 +1,14 @@
-﻿using PersistentStackVisualization.PaintModule;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows.Controls;
+﻿using DataAccessLayer;
+using Microsoft.Win32;
+using PersistentStackVisualization.PaintModule;
 using PersistentStackVisualization.ViewModel;
 using System;
-using System.Windows;
-using Microsoft.Win32;
+using System.ComponentModel;
 using System.IO;
+using System.Runtime.CompilerServices;
+using System.Windows;
+using System.Windows.Controls;
 using System.Xml;
-using System.Xml.Linq;
 
 namespace PersistentStackVisualization
 {
@@ -98,13 +98,13 @@ namespace PersistentStackVisualization
                             using (XmlReader readTest = XmlReader.Create("test.xml"))
                             {
                                 readTest.MoveToContent();
-                                while(readTest.Read())
+                                while (readTest.Read())
                                 {
                                     if (readTest.Name == "command")
-                                    { 
+                                    {
                                         readTest.MoveToAttribute("type");
                                         string type = readTest.ReadContentAsString();
-                                        if(type == "push")
+                                        if (type == "push")
                                         {
                                             readTest.MoveToAttribute("version");
                                             string version = readTest.ReadContentAsString();
@@ -114,16 +114,16 @@ namespace PersistentStackVisualization
                                             ValueNode = value;
                                             AddVersion.Execute(obj);
                                         }
-                                        if(type == "pop")
+                                        if (type == "pop")
                                         {
                                             readTest.MoveToAttribute("version");
                                             string version = readTest.ReadContentAsString();
                                             PopVersion = version;
                                             PopCommand.Execute(obj);
                                         }
-                                        
+
                                     }
-                                }                            
+                                }
                             }
                         }
                         )
@@ -149,12 +149,21 @@ namespace PersistentStackVisualization
                         {
                             try
                             {
-                                WriteConsole(String.Format("Push ({0}, {1})", VersionNode, ValueNode));
+                                using (var context = new StackContext())
+                                {
+                                    context.Records.Add(new LogRecord
+                                    {
+                                        Action = "Push",
+                                        Message = $"Push ({VersionNode}, {ValueNode})"
+                                    });
+                                    context.SaveChanges();
+                                }
+                                WriteConsole($"Push ({VersionNode}, {ValueNode})");
                                 StackPanel target = (StackPanel)version;
                                 target.Children.Add(new VersionElement().WrapperPush(VersionNode, ValueNode));
                                 TraceLog.Logger.LogInformation(String.Format("Push ({0}, {1})", VersionNode, ValueNode));
                             }
-                            catch(Exception exception)
+                            catch (Exception exception)
                             {
                                 MessageBox.Show("Version dose not exist (" + exception.Message + ")", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
                                 if (VersionElement.NumberVersion != -1) VersionElement.NumberVersion = 0;
@@ -186,12 +195,21 @@ namespace PersistentStackVisualization
                         {
                             try
                             {
-                                WriteConsole(String.Format("Pop ({0})", PopVersion));
+                                using (var context = new StackContext())
+                                {
+                                    context.Records.Add(new LogRecord
+                                    {
+                                        Action = "Pop",
+                                        Message = $"Pop ({PopVersion})"
+                                    });
+                                    context.SaveChanges();
+                                }
+                                WriteConsole($"Pop ({PopVersion})");
                                 StackPanel target = (StackPanel)obj;
                                 target.Children.Add(new VersionElement().WrapperPop(PopVersion));
                                 TraceLog.Logger.LogInformation(String.Format("Pop ({0})", PopVersion));
                             }
-                            catch(Exception exception)
+                            catch (Exception exception)
                             {
                                 MessageBox.Show("Version dose not exist (" + exception.Message + ")", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
                                 WriteConsole("# ERROR Version dose not exist");
@@ -258,7 +276,7 @@ namespace PersistentStackVisualization
                                 if (saveFileDialog.ShowDialog() == true)
                                     File.WriteAllText(saveFileDialog.FileName, ConsoleText);
                             }
-                            catch(Exception exception)
+                            catch (Exception exception)
                             {
                                 MessageBox.Show("Something is not good (" + exception.Message + ")", "Warning!", MessageBoxButton.OK, MessageBoxImage.Warning);
                                 WriteConsole("# Warning Can not open dialog save file");
